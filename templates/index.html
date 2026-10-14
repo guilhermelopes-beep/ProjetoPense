@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Site Oficial</title>
+</head>
+<body>
+    <h1>Olá, Mundo!</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda labore, eligendi porro ipsum quidem minima recusandae, nisi maxime cupiditate, voluptate dolorum corrupti molestiae temporibus dignissimos? Officiis ullam necessitatibus provident similique!</p>
+    
+    <p>Bem-vindo à minha página, {{ pessoa.nome }}! Velho pra krl {{pessoa.idade}}</p>
+    <p>Lista: {{ lista[1] }}</p>
+
+    <p>Quantidade de elementos: {{ lista|length }}</p>
+    <p>contas {{ 10+20 }}</p>
+
+    {% if pessoa.nome == "Guilherme"%}
+        <p>OTARIO</p>
+    {% else %}
+        <p>{{pessoa.nome}}</p>
+    {% endif %}
+
+</body>
+</html>

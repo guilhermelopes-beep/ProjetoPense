@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista com Estáticos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ranking de Frutas</h1>
+    <ul>
+        {% for fruta in lista %}
+            <a href="fruta-status?q={{loop.index}}"><li class="{{ 'cinza' if loop.index is even }} {{ 'destaque-primeiro' if loop.first }}">
+                {{ loop.index }}º - {{ fruta }}                
+                {% if loop.first %} Primeira  {% endif %}
+            </li></a>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
