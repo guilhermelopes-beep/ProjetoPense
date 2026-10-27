@@ -101,9 +101,10 @@ def fruta_status():
         {"Nome":"Kiwi", "Preco": 29.2, "Quantidade": 110}
         ]
 
-    fruta = lista_status[int(q)]
+    fruta = lista_status[int(q)-1]
+    print(fruta)
 
-    return render_template("index.html", fruta=fruta)
+    return render_template("fruta-status.html", fruta=fruta)
 
 
 if __name__ == '__main__':
