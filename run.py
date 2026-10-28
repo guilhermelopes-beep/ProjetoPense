@@ -1,6 +1,14 @@
 from flask import Flask, request, render_template
 from markupsafe import escape
 import jinja2
+import models
+
+m1 = models.Trabalho("Jurassic Park", "Machado de Assis", "Aventura")
+m2 = models.Trabalho("Água da Pedra", "Arnold Shwazneeger", "Aventura")
+m3 = models.Trabalho("Mundo dos macacos", "José Lins do Rego", "Simulador")
+m4 = models.Trabalho("Automobilista", "Max Verstappen", "Corrida")
+
+lista_trabalhos = [m1, m2 , m3, m4]
 
 
 app = Flask(__name__)
